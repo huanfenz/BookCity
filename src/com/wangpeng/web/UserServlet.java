@@ -75,7 +75,7 @@ public class UserServlet extends BaseServlet {
                 System.out.println("注册成功！");
                 userService.registUser(new User(null, username, password, email));
                 //保存用户登陆的信息到Session域中
-                req.getSession().setAttribute("user", user);
+                // req.getSession().setAttribute("user", user);
                 //跳转到注册成功页面
                 req.getRequestDispatcher("/pages/user/regist_success.jsp").forward(req,resp);
             }
